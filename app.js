@@ -73,7 +73,8 @@ function getJsonSearch(text, callback) {
     request({
         uri: 'https://api.mercadolibre.com/sites/MLA/search',
         qs: {
-            q: text
+            q: text,
+            limit:4
         }
     }, function (error, response, body) {
         if (!error && response.statusCode == 200) {
